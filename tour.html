@@ -27,9 +27,54 @@
     }
 
     .plcRouteList{
-        margin-left: 1mm;
+        margin-left: 5px;
     }
 
+    .pic{
+        border-radius: 50%;
+    }
+
+    .title{
+        position: absolute;
+        font-size: 18px;
+        font-weight: bolder;
+        color: white;
+        top: 0px;
+        left: 20px;
+        white-space: nowrap;
+        line-height: 40px;
+        margin-left: 30px;
+        /*border:1px soild black;*/
+        
+
+    }
+
+    .bottom{
+        position: absolute;
+        top: 390px;
+        left: 180px;
+    }
+     
+     .face{
+        border: 1px solid white;
+        float: left;
+        border-radius:50% ;
+        width: 39px;
+        height: 39px;
+     }
+
+     .day{
+         position: absolute;
+         top:110px;
+         right: 240px;
+         border-radius: 50%;
+         color: white;
+         background-color: #2bab79;
+         width: 40px;
+         height: 40px;/*方框大小*/
+         text-align: center;/*居中*/
+         line-height: 35px;/*行高*/
+     }
 </style>
 <body>
     <header class="qui-header">
@@ -38,8 +83,18 @@
 
     <section class="plcRouteList">
     <a href= "#" >
-    <img src="image/fengjing.jpg" alt="" width="640px">
+    <img src="image/fengjing.jpg" alt="" width="635px">
     </a>
+
+    <div class="bottom">
+    <p class="face">    
+    <img src="image/touxiang.jpg" alt="" width="38" height="38" class="pic">
+    </p>
+
+    <h2 class="title">我的旅游行程</h2>
+    </div>
+
+    <p class="day">14天</p>
     </section>
 </body>
 </html>
