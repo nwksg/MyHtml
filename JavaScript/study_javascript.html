@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>study javascript</title>
+</head>
+<body>
+    <script>
+        function sayhello(){
+        document.writeln("hello world javascript");
+        alert("hello world javascript");}
+
+        sayhello()
+
+        document.writeln('<br>')
+
+        var sayhello2=function(x){
+        document.writeln('<br>');
+        document.writeln("x=",x);
+        }(521);  //这样子不是一个函数，是一个输出，如果把(521)删了就是函数了
+
+        // sayhello2(520)
+
+        var study_var=function(){
+            var str1="变量名";
+            var num=1.5;
+            age=23;
+            var cars=new Array("A","B","C");
+            document.writeln("<br>"+str1);
+            document.writeln("<br>"+num+"<br>"+age);
+            document.writeln("<br>"+cars);
+        }
+         
+        study_var();
+
+        var sum=function(start,end){
+            var s=0;
+            var i;
+            for (i=start;i<=end;i++){
+                s=s+i;
+            }
+            document.writeln("<br>"+s);
+        }(1,100);
+
+        var sum_while=function(start,end){
+            var s=0;
+            var i=start;
+            while(i<=end){
+                if(i%2==1){
+                    s=s+i;
+                }
+                i++;
+            }
+            document.writeln("<br>"+s);
+        }(1,100);
+
+        var for_in=function(arr){
+            for(var each in arr){
+                document.writeln("<br>");
+                document.writeln("arr["+each+"]="+arr[each]);
+            }
+        }(new Array("a","test",1,3.0,[1,2,3,4]));
+
+        var static_person={
+            name:"chenlaoshi",
+            birth:1979,
+            school:"zjbc",
+            height:1.7,
+            weight:65,
+            score:null
+        }
+
+
+        static_person.eat=function(){
+            alert("object can eat")
+        }
+
+        static_person.country="china"
+        if ("weight" in static_person){
+            document.writeln("</br> object have weight");
+        }else{
+            document.writeln("</br> object have not weight");
+        }
+
+        document.writeln("</br>");
+        document.writeln(static_person.name);
+        document.writeln("</br>");
+        document.writeln(static_person.birth);
+        static_person.eat();
+
+        var person=new Object();
+        person.name="chenlaoshi";
+        person.eat=function(){
+            document.writeln("</br>");
+            document.writeln(person.name," can eat ");
+        }
+
+        person.eat();
+
+        var function_person=function(name){
+            this.name=name;
+            this.eat=function(){
+                document.writeln('</br>',name,"can eat");
+            }
+        }
+        p=new function_person("zhangsan");
+        p.eat();
+
+
+
+        var m=new Map([['chenlaoshi',90],['zhangsan',79],['lishi',60]]);
+        document.writeln('</br>');
+        document.writeln(m.get('chenlaoshi'));
+        m.delete('chenlaoshi');
+        document.writeln('</br>');
+        document.writeln(m.get('chenlaoshi'));
+
+
+
+
+    </script>
+</body>
+</html>
